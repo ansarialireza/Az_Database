@@ -7,12 +7,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY='django-insecure-95*u*w5%3ye=7fdga*u0*ur#2e^qnd^6^zlg0ptwj5gr+(02mb)'
 
-DEBUG=False
+DEBUG=True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1',]
 
 
 INSTALLED_APPS = [
+    'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -31,7 +32,6 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'django.contrib.sites',
     'django.contrib.sitemaps',
-    
 ]
 
 SITE_ID = 2

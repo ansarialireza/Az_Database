@@ -1,8 +1,16 @@
 from django.shortcuts import render
+from django.conf.urls import handler404
 from django.views import View
 from django.views.generic import ListView
+from .models import Contact,HomePage ,AboutUs
 from django.views.generic.edit import FormView
+from .forms import ContactUsForm,NewsletterForm
+from django.urls import reverse_lazy
 from django.contrib import messages
+from django.db.models import Q
+from itertools import chain
+from blog.models import Post
+from services.models import Services
 from .query_manager import SearchQueryManager
 
 class HomeView(View):
